@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB6D2CF9-ACD1-4502-8425-0242E07FEEE8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>shuangxingtyre</RootNamespace>
+    <AssemblyName>shuangxingtype</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>C:\Users\Administrator\Desktop\CSkin+16.1.14.2\CSkin 4.0\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.OPCAutomation">
+      <HintPath>D:\备份\opcda\OPCDA\obj\Debug\Interop.OPCAutomation.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpcNetApi, Version=2.0.2.0, Culture=neutral, PublicKeyToken=9a40e993cbface53, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_32\OpcNetApi\2.0.2.0__9a40e993cbface53\OpcNetApi.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcNetApi.Com, Version=2.0.1.0, Culture=neutral, PublicKeyToken=9a40e993cbface53, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_32\OpcNetApi.Com\2.0.1.0__9a40e993cbface53\OpcNetApi.Com.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="accountManagement\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accountManagement\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="accountManagement\frmCreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accountManagement\frmCreateAccount.Designer.cs">
+      <DependentUpon>frmCreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="accountManagement\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accountManagement\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="data\Account.cs" />
+    <Compile Include="data\tyre.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GantryClient\GantyrClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GantryClient\GantyrClient.Designer.cs">
+      <DependentUpon>GantyrClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hardware\dbshuangxing.cs" />
+    <Compile Include="hardware\DeviceBase.cs" />
+    <Compile Include="hardware\gantry.cs" />
+    <Compile Include="hardware\line.cs" />
+    <Compile Include="hardware\opc.cs" />
+    <Compile Include="hardware\QrCode.cs" />
+    <Compile Include="hardware\rextoth.cs" />
+    <Compile Include="hardware\SocketServer.cs" />
+    <Compile Include="material.cs" />
+    <Compile Include="monitorForm\Coordinate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\Coordinate.Designer.cs">
+      <DependentUpon>Coordinate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\bead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\bead.Designer.cs">
+      <DependentUpon>bead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\elsedefects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\elsedefects.Designer.cs">
+      <DependentUpon>elsedefects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\tyrecavity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\tyrecavity.Designer.cs">
+      <DependentUpon>tyrecavity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\tyreshoulderandside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\tyreshoulderandside.Designer.cs">
+      <DependentUpon>tyreshoulderandside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\crown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\crown.Designer.cs">
+      <DependentUpon>crown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\huancunqu2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\huancunqu2.Designer.cs">
+      <DependentUpon>huancunqu2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\huancunqu3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\huancunqu3.Designer.cs">
+      <DependentUpon>huancunqu3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\rengongwaijian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\rengongwaijian.Designer.cs">
+      <DependentUpon>rengongwaijian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\SetWareHouseSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\SetWareHouseSize.Designer.cs">
+      <DependentUpon>SetWareHouseSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\storagetyrequery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\storagetyrequery.Designer.cs">
+      <DependentUpon>storagetyrequery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\TyreConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\TyreConfiguration.Designer.cs">
+      <DependentUpon>TyreConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\tyremaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\tyremaintenance.Designer.cs">
+      <DependentUpon>tyremaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\tyrequery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\tyrequery.Designer.cs">
+      <DependentUpon>tyrequery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\zancunku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\zancunku.Designer.cs">
+      <DependentUpon>zancunku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\huancunqu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\huancunqu.Designer.cs">
+      <DependentUpon>huancunqu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\zancunqu2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\zancunqu2.Designer.cs">
+      <DependentUpon>zancunqu2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitorForm\zancunqu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitorForm\zancunqu.Designer.cs">
+      <DependentUpon>zancunqu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\ActDefine.cs" />
+    <Compile Include="Utils\Autosize.cs" />
+    <Compile Include="Utils\Constants.cs" />
+    <Compile Include="Utils\DatabaseUtils.cs" />
+    <Compile Include="Utils\ExcelUtils.cs" />
+    <Compile Include="Utils\MES.cs" />
+    <Compile Include="Utils\NiThread.cs" />
+    <Compile Include="Utils\PlcUtils.cs" />
+    <Compile Include="Utils\TraceLogListener.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GantryClient\GantyrClient.resx">
+      <DependentUpon>GantyrClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\bead.resx">
+      <DependentUpon>bead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\elsedefects.resx">
+      <DependentUpon>elsedefects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\tyrecavity.resx">
+      <DependentUpon>tyrecavity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\tyreshoulderandside.resx">
+      <DependentUpon>tyreshoulderandside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\crown.resx">
+      <DependentUpon>crown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\huancunqu2.resx">
+      <DependentUpon>huancunqu2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\huancunqu3.resx">
+      <DependentUpon>huancunqu3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\rengongwaijian.resx">
+      <DependentUpon>rengongwaijian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\storagetyrequery.resx">
+      <DependentUpon>storagetyrequery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\TyreConfiguration.resx">
+      <DependentUpon>TyreConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\tyremaintenance.resx">
+      <DependentUpon>tyremaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\tyrequery.resx">
+      <DependentUpon>tyrequery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\huancunqu.resx">
+      <DependentUpon>huancunqu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\zancunqu2.resx">
+      <DependentUpon>zancunqu2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitorForm\zancunqu.resx">
+      <DependentUpon>zancunqu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ActProgTypeLib">
+      <Guid>{CD7846DF-1C99-4BC0-8A8D-FBFB7FC26ACB}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
